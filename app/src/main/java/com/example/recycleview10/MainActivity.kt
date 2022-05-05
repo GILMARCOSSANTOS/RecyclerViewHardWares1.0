@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         val recycleView =
             findViewById<RecyclerView>(R.id.recycleView_produtosId)
 
-        // PASSO 03: DEFINIR ORIETAÇÃO DA RECYCLE VIEW
+        // PASSO 03: DEFINIR ORIENTAÇÃO DA RECYCLE VIEW
         recycleView.layoutManager =
             LinearLayoutManager(this,
                 LinearLayoutManager.VERTICAL,

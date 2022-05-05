@@ -24,6 +24,7 @@ class AdapterProduto(private val context: Context, private val produtos: Mutable
     RecyclerView.Adapter<AdapterProduto.
     ProdutoViewHolder>() {
 
+
     /**
      * 1 - Passo 09:
      * 1 - A classe inner class ProdutoViewHolder importar os id's e views
@@ -74,6 +75,5 @@ class AdapterProduto(private val context: Context, private val produtos: Mutable
      * • Segue para "MainActivity.kt".
      */
     override fun getItemCount(): Int = produtos.size
-
 
 }
