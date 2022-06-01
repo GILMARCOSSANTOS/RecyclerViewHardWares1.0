@@ -16,6 +16,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        /* Funções(): */
+        declararVariaveis()
+
         // PASSO 02:
         // VEM DE activity_main.
         val recycleView =
@@ -132,4 +135,15 @@ class MainActivity : AppCompatActivity() {
         listaProduto.add(produtoTeclado)
 
     }
+
+    private fun declararVariaveis() {
+        recyclerView = findViewById(R.id.recycleView_produtosId)
+    }
+
+    /** 01: Não pode mais de uma palavra;
+     * 02: Criar branch e entra na nova branch;
+     * 03: Ao criar a Branch, de forma automática, o usuário será
+     * logado na nova Branch.
+     */
+    git checkout –b nomeDaBranch
 }
