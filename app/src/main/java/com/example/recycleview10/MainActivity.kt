@@ -8,6 +8,10 @@ import com.example.recycleview10.adapter.AdapterProduto
 import com.example.recycleview10.model.Produto
 
 class MainActivity : AppCompatActivity() {
+
+    /* Variáveis de Escopo Global: */
+    private lateinit var recyclerView: RecyclerView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -19,9 +23,11 @@ class MainActivity : AppCompatActivity() {
 
         // PASSO 03: DEFINIR ORIENTAÇÃO DA RECYCLE VIEW
         recycleView.layoutManager =
-            LinearLayoutManager(this,
+            LinearLayoutManager(
+                this,
                 LinearLayoutManager.VERTICAL,
-                false)
+                false
+            )
 
         // PASSO 04: OTIMIZAR A LISTA.
         // SEGUE PARA hardware_item.xml.
@@ -36,8 +42,14 @@ class MainActivity : AppCompatActivity() {
         val adapterProduto = AdapterProduto(this, listaProduto)
 
         //Herda de "activity_main.xml"
-        val recycleViewProdutos = findViewById<RecyclerView>(R.id.recycleView_produtosId)
-        recycleViewProdutos.adapter = adapterProduto
+
+        /*
+        ▬▬▬ CÓDIGO DESNECESSÁRIO:
+       val recycleViewProdutos = findViewById<RecyclerView>(R.id.recycleView_produtosId)
+       recycleViewProdutos.adapter = adapterProduto
+         */
+
+        recycleView.adapter = adapterProduto
 
         val produtoHdSSD = Produto(
             foto = R.drawable.ssd,
@@ -90,7 +102,7 @@ class MainActivity : AppCompatActivity() {
         val produtoTeclado = Produto(
             foto = R.drawable.teclado,
 
-            nome = "Teclado Mecânico Gamer T-Dagger Corvette" ,
+            nome = "Teclado Mecânico Gamer T-Dagger Corvette",
 
 
             descricao = "Teclado Mecânico Gamer T-Dagger " +
@@ -102,7 +114,7 @@ class MainActivity : AppCompatActivity() {
         val produtoGabinete = Produto(
             foto = R.drawable.gabinete,
 
-            nome = "Gabinete Gamer" ,
+            nome = "Gabinete Gamer",
 
             descricao = "A série Carbide SPEC-DELTA RGB é uma " +
                     "caixa ATX de torre média de vidro temperado com " +
