@@ -145,5 +145,6 @@ class MainActivity : AppCompatActivity() {
      * 03: Ao criar a Branch, de forma automática, o usuário será
      * logado na nova Branch.
      */
-    git checkout –b nomeDaBranch
+    //git checkout –b nomeDaBranch
+    // TesteBranch
 }
