@@ -2,6 +2,8 @@ package com.example.recycleview10
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Adapter
+import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recycleview10.adapter.AdapterProduto
@@ -11,6 +13,7 @@ class MainActivity : AppCompatActivity() {
 
     /* Variáveis de Escopo Global: */
     private lateinit var recyclerView: RecyclerView
+    private var listaProduto: MutableList<Produto>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,41 +21,42 @@ class MainActivity : AppCompatActivity() {
 
         /* Funções(): */
         declararVariaveis()
+        configurarRecyclerView()
+        instanciarClasseProdutos()
 
-        // PASSO 02:
-        // VEM DE activity_main.
-        val recycleView =
+
+
+    }
+
+    private fun declararVariaveis() {
+        recyclerView =
             findViewById<RecyclerView>(R.id.recycleView_produtosId)
 
+    }
+
+    private fun configurarRecyclerView() {
+
+        // PASSO 04: OTIMIZAR A LISTA.
+        recyclerView.setHasFixedSize(true)
+
         // PASSO 03: DEFINIR ORIENTAÇÃO DA RECYCLE VIEW
-        recycleView.layoutManager =
+        recyclerView.layoutManager =
             LinearLayoutManager(
                 this,
                 LinearLayoutManager.VERTICAL,
                 false
             )
+    }
 
-        // PASSO 04: OTIMIZAR A LISTA.
-        // SEGUE PARA hardware_item.xml.
-        recycleView.setHasFixedSize(true)
+    private fun instanciarClasseProdutos(){
 
-        /**
-         * • PASSO 12:
-         * • Herda da classe "AdapterProduto".
-         *
-         */
-        val listaProduto: MutableList<Produto> = mutableListOf()
-        val adapterProduto = AdapterProduto(this, listaProduto)
+        val adapterProduto = AdapterProduto()
 
-        //Herda de "activity_main.xml"
+        listaProduto = mutableListOf()
+      //  val adapterProduto = AdapterProduto(this, listaProduto!!)
+        recyclerView.adapter = adapterProduto
 
-        /*
-        ▬▬▬ CÓDIGO DESNECESSÁRIO:
-       val recycleViewProdutos = findViewById<RecyclerView>(R.id.recycleView_produtosId)
-       recycleViewProdutos.adapter = adapterProduto
-         */
 
-        recycleView.adapter = adapterProduto
 
         val produtoHdSSD = Produto(
             foto = R.drawable.ssd,
@@ -127,24 +131,17 @@ class MainActivity : AppCompatActivity() {
             preco = "799,00"
         )
 
-        listaProduto.add(produtoHdSSD)
-        listaProduto.add(produtoProcessador)
-        listaProduto.add(produtoMemoriaRam)
-        listaProduto.add(produtoGabinete)
-        listaProduto.add(produtoPlacaDeVideo)
-        listaProduto.add(produtoTeclado)
-
+        listaProduto!!.add(produtoHdSSD)
+        listaProduto!!.add(produtoProcessador)
+        listaProduto!!.add(produtoMemoriaRam)
+        listaProduto!!.add(produtoGabinete)
+        listaProduto!!.add(produtoPlacaDeVideo)
+        listaProduto!!.add(produtoTeclado)
     }
 
-    private fun declararVariaveis() {
-        recyclerView = findViewById(R.id.recycleView_produtosId)
-    }
 
-    /** 01: Não pode mais de uma palavra;
-     * 02: Criar branch e entra na nova branch;
-     * 03: Ao criar a Branch, de forma automática, o usuário será
-     * logado na nova Branch.
-     */
-    //git checkout –b nomeDaBranch
-    // TesteBranch
+
+
+
+
 }
