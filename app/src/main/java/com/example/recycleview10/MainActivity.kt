@@ -2,6 +2,7 @@ package com.example.recycleview10
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recycleview10.adapter.AdapterProduto
@@ -22,12 +23,8 @@ class MainActivity : AppCompatActivity() {
             findViewById<RecyclerView>(R.id.recycleView_produtosId)
 
         // PASSO 03: DEFINIR ORIENTAÇÃO DA RECYCLE VIEW
-        recycleView.layoutManager =
-            LinearLayoutManager(
-                this,
-                LinearLayoutManager.VERTICAL,
-                false
-            )
+        recycleView.layoutManager = GridLayoutManager(this,3);
+
 
         // PASSO 04: OTIMIZAR A LISTA.
         // SEGUE PARA hardware_item.xml.
