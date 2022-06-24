@@ -23,15 +23,11 @@ class MainActivity : AppCompatActivity() {
         declararVariaveis()
         configurarRecyclerView()
         instanciarClasseProdutos()
-
-
-
     }
 
     private fun declararVariaveis() {
         recyclerView =
             findViewById<RecyclerView>(R.id.recycleView_produtosId)
-
     }
 
     private fun configurarRecyclerView() {
@@ -50,13 +46,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun instanciarClasseProdutos(){
 
-        val adapterProduto = AdapterProduto()
+      //  val adapterProduto = listaProduto?.let { AdapterProduto(this, it) }
 
         listaProduto = mutableListOf()
-      //  val adapterProduto = AdapterProduto(this, listaProduto!!)
+        val adapterProduto = AdapterProduto(this, listaProduto!!)
         recyclerView.adapter = adapterProduto
-
-
 
         val produtoHdSSD = Produto(
             foto = R.drawable.ssd,
@@ -111,7 +105,6 @@ class MainActivity : AppCompatActivity() {
 
             nome = "Teclado Mecânico Gamer T-Dagger Corvette",
 
-
             descricao = "Teclado Mecânico Gamer T-Dagger " +
                     "Corvette, LED Rainbow, Switch Outemu DIY Blue, ABNT2 - T-TGK302 -BL (PT-BLUE).",
 
@@ -138,10 +131,4 @@ class MainActivity : AppCompatActivity() {
         listaProduto!!.add(produtoPlacaDeVideo)
         listaProduto!!.add(produtoTeclado)
     }
-
-
-
-
-
-
 }

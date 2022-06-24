@@ -8,19 +8,6 @@
     android:layout_margin="10dp"
     android:background="@color/white">
 
-    <TextView
-        android:id="@+id/txtVw_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Sessão Hardwares de PC's"
-        android:textSize="25sp"
-        android:background="@color/teal_700"
-        android:textColor="@color/white"
-        android:gravity="center"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- PASSO 05: VEIO DE mainActivity.kt -->
     <!-- SEGUE PARA PACOTE model -->
@@ -33,7 +20,7 @@
         android:scrollbarSize="17dp"
         android:src="@drawable/gabinete"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtVw_title" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/nomeProdutoId"
@@ -49,7 +36,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/fotoProdutoId"
-        app:layout_constraintTop_toBottomOf="@id/txtVw_title" />
+        app:layout_constraintTop_toTopOf="parent"  />
 
     <TextView
         android:id="@+id/descricaoProdutoId"
