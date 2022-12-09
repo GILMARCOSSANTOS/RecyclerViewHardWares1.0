@@ -61,7 +61,6 @@ class MainActivity : AppCompatActivity() {
                     "A SanDisk, pioneira em tecnologias de armazenamento" +
                     " de estado sólido é a marca de confiança dos profissionais" +
                     " da área, oferece maior velocidade e desempenho com o SanDisk SSD Plus.",
-
             preco = "R$ 450,00"
         )
 

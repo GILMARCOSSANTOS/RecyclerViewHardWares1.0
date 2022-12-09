@@ -1,5 +1,6 @@
 package com.example.recycleview10.adapter
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -51,7 +52,6 @@ class AdapterProduto(private val context: Context, private val produtos: Mutable
 
         val holder = ProdutoViewHolder(itemLista)
         return holder
-
     }
 
     /**
@@ -62,6 +62,7 @@ class AdapterProduto(private val context: Context, private val produtos: Mutable
      * • Criar uma lista mutável na classe AdapterProdutos para invocar todos os ítens
      * a serem exibidos.
      */
+
     override fun onBindViewHolder(holder: ProdutoViewHolder, position: Int) {
         holder.foto.setImageResource(produtos[position].foto)
         holder.nome.setText(produtos[position].nome)
