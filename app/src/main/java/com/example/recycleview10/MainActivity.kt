@@ -2,7 +2,12 @@ package com.example.recycleview10
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+
 import androidx.recyclerview.widget.GridLayoutManager
+
+import android.widget.Adapter
+import android.widget.ImageView
+
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recycleview10.adapter.AdapterProduto
@@ -12,41 +17,48 @@ class MainActivity : AppCompatActivity() {
 
     /* Variáveis de Escopo Global: */
     private lateinit var recyclerView: RecyclerView
+    private var listaProduto: MutableList<Produto>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // PASSO 02:
-        // VEM DE activity_main.
-        val recycleView =
+        /* Funções(): */
+        declararVariaveis()
+        configurarRecyclerView()
+        instanciarClasseProdutos()
+    }
+
+    private fun declararVariaveis() {
+        recyclerView =
             findViewById<RecyclerView>(R.id.recycleView_produtosId)
+    }
 
-        // PASSO 03: DEFINIR ORIENTAÇÃO DA RECYCLE VIEW
-        recycleView.layoutManager = GridLayoutManager(this,3);
-
+    private fun configurarRecyclerView() {
 
         // PASSO 04: OTIMIZAR A LISTA.
-        // SEGUE PARA hardware_item.xml.
-        recycleView.setHasFixedSize(true)
+        recyclerView.setHasFixedSize(true)
 
-        /**
-         * • PASSO 12:
-         * • Herda da classe "AdapterProduto".
-         *
-         */
-        val listaProduto: MutableList<Produto> = mutableListOf()
-        val adapterProduto = AdapterProduto(this, listaProduto)
+        // PASSO 03: DEFINIR ORIENTAÇÃO DA RECYCLE VIEW
 
-        //Herda de "activity_main.xml"
+       // recycleView.layoutManager = GridLayoutManager(this,3);
 
-        /*
-        ▬▬▬ CÓDIGO DESNECESSÁRIO:
-       val recycleViewProdutos = findViewById<RecyclerView>(R.id.recycleView_produtosId)
-       recycleViewProdutos.adapter = adapterProduto
-         */
+        recyclerView.layoutManager =
+            LinearLayoutManager(
+                this,
+                LinearLayoutManager.VERTICAL,
+                false
+            )
+    }
 
-        recycleView.adapter = adapterProduto
+
+    private fun instanciarClasseProdutos(){
+
+      //  val adapterProduto = listaProduto?.let { AdapterProduto(this, it) }
+
+        listaProduto = mutableListOf()
+        val adapterProduto = AdapterProduto(this, listaProduto!!)
+        recyclerView.adapter = adapterProduto
 
         val produtoHdSSD = Produto(
             foto = R.drawable.ssd,
@@ -57,7 +69,6 @@ class MainActivity : AppCompatActivity() {
                     "A SanDisk, pioneira em tecnologias de armazenamento" +
                     " de estado sólido é a marca de confiança dos profissionais" +
                     " da área, oferece maior velocidade e desempenho com o SanDisk SSD Plus.",
-
             preco = "R$ 450,00"
         )
 
@@ -101,7 +112,6 @@ class MainActivity : AppCompatActivity() {
 
             nome = "Teclado Mecânico Gamer T-Dagger Corvette",
 
-
             descricao = "Teclado Mecânico Gamer T-Dagger " +
                     "Corvette, LED Rainbow, Switch Outemu DIY Blue, ABNT2 - T-TGK302 -BL (PT-BLUE).",
 
@@ -121,12 +131,11 @@ class MainActivity : AppCompatActivity() {
             preco = "799,00"
         )
 
-        listaProduto.add(produtoHdSSD)
-        listaProduto.add(produtoProcessador)
-        listaProduto.add(produtoMemoriaRam)
-        listaProduto.add(produtoGabinete)
-        listaProduto.add(produtoPlacaDeVideo)
-        listaProduto.add(produtoTeclado)
-
+        listaProduto!!.add(produtoHdSSD)
+        listaProduto!!.add(produtoProcessador)
+        listaProduto!!.add(produtoMemoriaRam)
+        listaProduto!!.add(produtoGabinete)
+        listaProduto!!.add(produtoPlacaDeVideo)
+        listaProduto!!.add(produtoTeclado)
     }
 }
