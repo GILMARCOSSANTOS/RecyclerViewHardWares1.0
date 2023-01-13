@@ -64,7 +64,10 @@ class AdapterProduto(private val context: Context, private val produtos: Mutable
      */
 
     override fun onBindViewHolder(holder: ProdutoViewHolder, position: Int) {
-//
+        holder.foto.setImageResource(produtos[position].foto)
+        holder.nome.setText(produtos[position].nome)
+        holder.descricao.setText(produtos[position].descricao)
+        holder.preco.setText(produtos[position].preco)
     }
 
     /**
