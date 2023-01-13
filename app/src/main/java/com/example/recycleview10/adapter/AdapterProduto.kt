@@ -31,10 +31,10 @@ class AdapterProduto(private val context: Context, private val produtos: Mutable
      * do arquivo xml "hardware_item.xml".
      */
     inner class ProdutoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-//        val foto = itemView.findViewById<ImageView>(R.id.fotoProdutoId)
-//        val nome = itemView.findViewById<TextView>(R.id.nomeProdutoId)
-//        val descricao = itemView.findViewById<TextView>(R.id.descricaoProdutoId)
-//        val preco = itemView.findViewById<TextView>(R.id.precoProdutoId)
+        val foto = itemView.findViewById<ImageView>(R.id.fotoProdutoId)
+        val nome = itemView.findViewById<TextView>(R.id.nomeProdutoId)
+        val descricao = itemView.findViewById<TextView>(R.id.descricaoProdutoId)
+        val preco = itemView.findViewById<TextView>(R.id.precoProdutoId)
 
     }
 

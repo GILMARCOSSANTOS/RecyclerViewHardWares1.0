@@ -24,50 +24,50 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-<!--    <TextView-->
-<!--        android:id="@+id/nomeProdutoId"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="175dp"-->
-<!--        android:layout_marginTop="10dp"-->
-<!--        android:layout_marginEnd="10dp"-->
-<!--        android:maxLines="2"-->
-<!--        android:text="@string/gabineteGamer"-->
-<!--        android:textColor="@color/black"-->
-<!--        android:textSize="25sp"-->
-<!--        android:textStyle="bold"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/fotoProdutoId"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
+    <TextView
+        android:id="@+id/nomeProdutoId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:maxLines="2"
+        android:text="@string/gabineteGamer"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fotoProdutoId"
+        app:layout_constraintTop_toTopOf="parent" />
 
-<!--    <TextView-->
-<!--        android:id="@+id/descricaoProdutoId"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="175dp"-->
-<!--        android:layout_marginTop="10dp"-->
-<!--        android:layout_marginEnd="10dp"-->
-<!--        android:maxLines="4"-->
-<!--        android:text="@string/descricaoGabinete"-->
-<!--        android:textAlignment="textStart"-->
-<!--        android:textSize="17sp"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/fotoProdutoId"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/nomeProdutoId" />-->
+    <TextView
+        android:id="@+id/descricaoProdutoId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:maxLines="4"
+        android:text="@string/descricaoGabinete"
+        android:textAlignment="textStart"
+        android:textSize="17sp"
+        app:layout_constraintStart_toEndOf="@+id/fotoProdutoId"
+        app:layout_constraintTop_toBottomOf="@+id/nomeProdutoId" />
 
-<!--    <TextView-->
-<!--        android:id="@+id/precoProdutoId"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="175dp"-->
-<!--        android:layout_marginTop="10dp"-->
-<!--        android:layout_marginEnd="10dp"-->
-<!--        android:text="@string/preco"-->
-<!--        android:textSize="17sp"-->
-<!--        android:textStyle="bold"-->
-<!--        android:textColor="@color/green"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/fotoProdutoId"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/descricaoProdutoId" />-->
+    <TextView
+        android:id="@+id/precoProdutoId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/preco"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="@color/green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fotoProdutoId"
+        app:layout_constraintTop_toBottomOf="@+id/descricaoProdutoId" />
 
 
 
