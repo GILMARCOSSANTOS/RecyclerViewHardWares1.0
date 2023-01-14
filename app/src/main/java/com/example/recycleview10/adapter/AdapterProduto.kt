@@ -1,13 +1,11 @@
 package com.example.recycleview10.adapter
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.view.menu.MenuView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recycleview10.R
 import com.example.recycleview10.model.Produto
@@ -32,11 +30,10 @@ class AdapterProduto(private val context: Context, private val produtos: Mutable
      * do arquivo xml "hardware_item.xml".
      */
     inner class ProdutoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val foto = itemView.findViewById<ImageView>(R.id.fotoProdutoId)
-        val nome = itemView.findViewById<TextView>(R.id.nomeProdutoId)
-        val descricao = itemView.findViewById<TextView>(R.id.descricaoProdutoId)
-        val preco = itemView.findViewById<TextView>(R.id.precoProdutoId)
-
+        val foto = itemView.findViewById<ImageView>(R.id.fotoProdutoId);
+        val nome = itemView.findViewById<TextView>(R.id.nomeProdutoId);
+        val descricao = itemView.findViewById<TextView>(R.id.descricaoProdutoId);
+        val preco = itemView.findViewById<TextView>(R.id.precoProdutoId);
     }
 
     /**
@@ -50,8 +47,8 @@ class AdapterProduto(private val context: Context, private val produtos: Mutable
             parent, false
         )
 
-        val holder = ProdutoViewHolder(itemLista)
-        return holder
+        val holder = ProdutoViewHolder(itemLista);
+        return holder;
     }
 
     /**
@@ -64,10 +61,10 @@ class AdapterProduto(private val context: Context, private val produtos: Mutable
      */
 
     override fun onBindViewHolder(holder: ProdutoViewHolder, position: Int) {
-        holder.foto.setImageResource(produtos[position].foto)
-        holder.nome.setText(produtos[position].nome)
-        holder.descricao.setText(produtos[position].descricao)
-        holder.preco.setText(produtos[position].preco)
+        holder.foto.setImageResource(produtos[position].foto);
+        holder.nome.setText(produtos[position].nome);
+        holder.descricao.setText(produtos[position].descricao);
+        holder.preco.setText(produtos[position].preco);
     }
 
     /**
@@ -75,6 +72,5 @@ class AdapterProduto(private val context: Context, private val produtos: Mutable
      * • Implementar o ".size".
      * • Segue para "MainActivity.kt".
      */
-    override fun getItemCount(): Int = produtos.size
-
+    override fun getItemCount(): Int = produtos.size;
 }
