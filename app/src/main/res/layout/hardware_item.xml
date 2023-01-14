@@ -6,12 +6,8 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
-    android:background="@color/white"
-    >
+    android:background="@color/white">
 
-
-    <!-- PASSO 05: VEIO DE mainActivity.kt -->
-    <!-- SEGUE PARA PACOTE model -->
     <ImageView
         android:id="@+id/fotoProdutoId"
         android:layout_width="80dp"
@@ -19,7 +15,6 @@
         android:layout_margin="10dp"
         android:layout_marginTop="10dp"
         android:scrollbarSize="17dp"
-
         android:src="@drawable/gabinete"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -68,6 +63,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/fotoProdutoId"
         app:layout_constraintTop_toBottomOf="@+id/descricaoProdutoId" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

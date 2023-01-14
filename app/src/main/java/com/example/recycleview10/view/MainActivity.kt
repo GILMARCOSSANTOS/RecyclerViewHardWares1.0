@@ -1,15 +1,11 @@
-package com.example.recycleview10
+package com.example.recycleview10.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-import androidx.recyclerview.widget.GridLayoutManager
-
-import android.widget.Adapter
-import android.widget.ImageView
-
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.recycleview10.R
 import com.example.recycleview10.adapter.AdapterProduto
 import com.example.recycleview10.model.Produto
 

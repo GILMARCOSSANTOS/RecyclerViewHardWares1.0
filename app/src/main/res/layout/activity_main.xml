@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="horizontal" xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/back_degrade"
-    tools:context=".MainActivity">
+    tools:context=".view.MainActivity">
 
     <LinearLayout
         android:id="@+id/lnrLyt_actvtMain_01"
@@ -14,9 +14,7 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:scrollbars="horizontal"
-        />
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/txtVw_title"
@@ -24,14 +22,11 @@
             android:layout_height="wrap_content"
             android:background="@color/teal_700"
             android:gravity="center"
-            android:text="Sessão Hardwares de PC's"
+            android:text="@string/sessao_hardware_pc"
             android:textColor="@color/white"
             android:textSize="25sp"
             android:textStyle="bold" />
 
-        <!-- PASSO 01: SEGUE PARA MainActivity.kt -->
-        <!--        app:layout_constraintStart_toStartOf="parent"-->
-        <!--        app:layout_constraintTop_toBottomOf="@id/txtVw_title"-->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycleView_produtosId"
             android:layout_width="match_parent"
@@ -40,3 +35,4 @@
 
     </LinearLayout>
 
+</androidx.constraintlayout.widget.ConstraintLayout>
