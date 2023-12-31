@@ -10,6 +10,10 @@ servidor, seriam tratadas como String.
  05 - SEGUIR PARA O PACOTE Adapter.
  */
 data class Produto(
+
+    /**
+     * Note:
+     * */
     val foto: Int,
     val nome: String,
     val descricao: String,
