@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
 
         // PASSO 03: DEFINIR ORIENTAÇÃO DA RECYCLE VIEW
 
-       // recycleView.layoutManager = GridLayoutManager(this,3);
+        // recycleView.layoutManager = GridLayoutManager(this,3);
 
         recyclerView.layoutManager =
             LinearLayoutManager(
@@ -48,15 +48,15 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    private fun instanciarClasseProdutos(){
-
-      //  val adapterProduto = listaProduto?.let { AdapterProduto(this, it) }
+    private fun instanciarClasseProdutos() {
 
         listaProduto = mutableListOf()
         val adapterProduto = AdapterProduto(this, listaProduto!!)
         recyclerView.adapter = adapterProduto
 
-        val produtoHdSSD = Produto(
+        val produtoHd = Produto(
+            sessao = "Software",
+
             foto = R.drawable.ssd,
 
             nome = "SSD SanDisk Plus 480GB",
@@ -69,6 +69,8 @@ class MainActivity : AppCompatActivity() {
         )
 
         val produtoProcessador = Produto(
+            sessao = "Software",
+
             foto = R.drawable.processador,
 
             nome = "Intel Core i5 10400F",
@@ -78,10 +80,12 @@ class MainActivity : AppCompatActivity() {
                     "incríveis para melhorar a produtividade e proporcionar entretenimento " +
                     "surpreendente.",
 
-            preco = "R$ 450,00"
+            preco = "R$ 550,00"
         )
 
         val produtoMemoriaRam = Produto(
+            sessao = "Sofware",
+
             foto = R.drawable.memoria,
 
             nome = "Memória Ram Corsair  8GB DDR4 ",
@@ -92,6 +96,7 @@ class MainActivity : AppCompatActivity() {
         )
 
         val produtoPlacaDeVideo = Produto(
+            sessao = "Hardware",
             foto = R.drawable.placadevideo,
 
             nome = "GeForce RTX 3090 24GB",
@@ -104,6 +109,8 @@ class MainActivity : AppCompatActivity() {
         )
 
         val produtoTeclado = Produto(
+            sessao = "Hardware",
+
             foto = R.drawable.teclado,
 
             nome = "Teclado Mecânico Gamer T-Dagger Corvette",
@@ -115,6 +122,8 @@ class MainActivity : AppCompatActivity() {
         )
 
         val produtoGabinete = Produto(
+
+            sessao = "Hardware",
             foto = R.drawable.gabinete,
 
             nome = "Gabinete Gamer",
@@ -127,7 +136,7 @@ class MainActivity : AppCompatActivity() {
             preco = "799,00"
         )
 
-        listaProduto!!.add(produtoHdSSD)
+        listaProduto!!.add(produtoHd)
         listaProduto!!.add(produtoProcessador)
         listaProduto!!.add(produtoMemoriaRam)
         listaProduto!!.add(produtoGabinete)

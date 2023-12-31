@@ -32,11 +32,11 @@ class AdapterProduto(private val context: Context, private val produtos: Mutable
      * do arquivo xml "hardware_item.xml".
      */
     inner class ProdutoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val sessao = itemView.findViewById<TextView>(R.id.sessaoDeProdutosId)
         val foto = itemView.findViewById<ImageView>(R.id.fotoProdutoId)
         val nome = itemView.findViewById<TextView>(R.id.nomeProdutoId)
         val descricao = itemView.findViewById<TextView>(R.id.descricaoProdutoId)
         val preco = itemView.findViewById<TextView>(R.id.precoProdutoId)
-
     }
 
     /**
@@ -64,6 +64,7 @@ class AdapterProduto(private val context: Context, private val produtos: Mutable
      */
 
     override fun onBindViewHolder(holder: ProdutoViewHolder, position: Int) {
+        holder.sessao.setText(produtos[position].sessao)
         holder.foto.setImageResource(produtos[position].foto)
         holder.nome.setText(produtos[position].nome)
         holder.descricao.setText(produtos[position].descricao)
