@@ -1,2 +1,2 @@
 ▬▬▬ Objetivo da HardwareGrouped:
-• Agrupar os Produtos por Hardware e Software,
+• Agrupar os Produtos por Hardware e Software.
