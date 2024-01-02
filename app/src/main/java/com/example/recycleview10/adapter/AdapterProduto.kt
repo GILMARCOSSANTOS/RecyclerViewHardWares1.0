@@ -39,7 +39,8 @@ class AdapterProduto(private val context: Context, private val produtos: Mutable
         holder.descricao.setText(produtos[position].descricao)
         holder.preco.setText(produtos[position].preco)
     }
-    override fun getItemCount():Int{
+
+    override fun getItemCount(): Int {
         return produtos.size
     }
 }

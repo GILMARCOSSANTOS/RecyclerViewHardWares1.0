@@ -2,7 +2,6 @@ package com.example.recycleview10.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recycleview10.R
@@ -32,12 +31,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun configurarRecyclerView() {
 
-        // PASSO 04: OTIMIZAR A LISTA.
         recyclerView.setHasFixedSize(true)
-
-        // PASSO 03: DEFINIR ORIENTAÇÃO DA RECYCLE VIEW
-
-        // recycleView.layoutManager = GridLayoutManager(this,3);
 
         recyclerView.layoutManager =
             LinearLayoutManager(
@@ -46,7 +40,6 @@ class MainActivity : AppCompatActivity() {
                 false
             )
     }
-
 
     private fun instanciarClasseProdutos() {
 
