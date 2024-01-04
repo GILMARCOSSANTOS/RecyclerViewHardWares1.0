@@ -61,9 +61,9 @@ class MainActivity : AppCompatActivity() {
 
         val produtoHd = ModelProduto(
 
-            data = "15.05.2023",
-            foto = R.drawable.ssd,
-            nome = "SSD SanDisk Plus 480GB",
+            data = "17/06/1987",
+            foto = R.drawable.hd,
+            nome = "Hd SanDisk Plus 480GB",
             descricao = "Confiável, rápido e muita capacidade. " +
                     "A SanDisk, pioneira em tecnologias de armazenamento" +
                     " de estado sólido é a marca de confiança dos profissionais" +
@@ -72,7 +72,7 @@ class MainActivity : AppCompatActivity() {
         )
 
         val produtoProcessador = ModelProduto(
-            data = "25.07.2025",
+            data = "25/12/2023",
             foto = R.drawable.processador,
             nome = "Intel Core i5 10400F",
             descricao = "Os novos processadores da 10ª " +
@@ -83,7 +83,7 @@ class MainActivity : AppCompatActivity() {
         )
 
         val produtoMemoriaRam = ModelProduto(
-            data = "25.07.2025",
+            data = "17/06/1987",
             foto = R.drawable.memoria,
             nome = "Memória Ram Corsair  8GB DDR4 ",
             descricao = "Memória Corsair Vengeance LPX, 8GB, 2666MHz, DDR4, C16, Preto.",
@@ -91,7 +91,7 @@ class MainActivity : AppCompatActivity() {
         )
 
         val produtoPlacaDeVideo = ModelProduto(
-            data = "15.05.2023",
+            data = "25/12/2023",
             foto = R.drawable.placadevideo,
             nome = "GeForce RTX 3090 24GB",
             descricao = "Os blocos de construção para a GPU " +
@@ -101,7 +101,7 @@ class MainActivity : AppCompatActivity() {
         )
 
         val produtoTeclado = ModelProduto(
-            data = "25.07.2025",
+            data = "17/06/1987",
             foto = R.drawable.teclado,
             nome = "Teclado Mecânico Gamer T-Dagger Corvette",
             descricao = "Teclado Mecânico Gamer T-Dagger " +
@@ -111,7 +111,7 @@ class MainActivity : AppCompatActivity() {
 
         val produtoGabinete = ModelProduto(
 
-            data = "15.05.2023",
+            data = "25/12/2023",
             foto = R.drawable.gabinete,
             nome = "Gabinete Gamer",
             descricao = "A série Carbide SPEC-DELTA RGB é uma " +
@@ -121,12 +121,12 @@ class MainActivity : AppCompatActivity() {
             preco = "799,00"
         )
 
-        listaProduto!!.add(produtoProcessador)
-        listaProduto!!.add(produtoTeclado)
         listaProduto!!.add(produtoHd)
+        listaProduto!!.add(produtoProcessador)
         listaProduto!!.add(produtoMemoriaRam)
-        listaProduto!!.add(produtoGabinete)
         listaProduto!!.add(produtoPlacaDeVideo)
+        listaProduto!!.add(produtoTeclado)
+        listaProduto!!.add(produtoGabinete)
 
 //        val listaProdutoSemRepetidos = listaProduto!!.distinctBy { it.sessao }
 //        val data = listaProdutoSemRepetidos.first().sessao
