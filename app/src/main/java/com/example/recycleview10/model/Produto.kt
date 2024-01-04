@@ -1,7 +1,7 @@
 package com.example.recycleview10.model
 
-data class Produto(
-    val sessao: String,
+data class ModelProduto(
+    val data: String,
     val foto: Int,
     val nome: String,
     val descricao: String,
