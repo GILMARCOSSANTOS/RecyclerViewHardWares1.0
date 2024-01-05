@@ -17,8 +17,6 @@ class AdapterProduto(
     RecyclerView.Adapter<AdapterProduto.
     ProdutoViewHolder>() {
 
-    private var dataAnterior: String? = null
-
     inner class ProdutoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val textViewData = itemView.findViewById<TextView>(R.id.sessaoDeProdutosId)
         val imageViewFoto = itemView.findViewById<ImageView>(R.id.fotoProdutoId)
@@ -41,15 +39,6 @@ class AdapterProduto(
 
         val produtoPosition = produtosModelProdutos[position]
 
-        holder.textViewData.visibility = View.GONE // Oculta por padrão
-
-        // Verifica se a data atual é diferente da anterior
-        if (produtoPosition.data != dataAnterior) {
-            holder.textViewData.visibility = View.VISIBLE // Mostra a data
-            holder.textViewData.text = produtoPosition.data // Define o texto da data
-            dataAnterior = produtoPosition.data // Atualiza a data anterior
-        }
-
         holder.textViewData.text = produtoPosition.data
         holder.imageViewFoto.setImageResource(produtoPosition.foto)
         holder.textViewNome.text = produtoPosition.nome
@@ -61,6 +50,8 @@ class AdapterProduto(
         return produtosModelProdutos.size
     }
 }
+
+
 
 
 

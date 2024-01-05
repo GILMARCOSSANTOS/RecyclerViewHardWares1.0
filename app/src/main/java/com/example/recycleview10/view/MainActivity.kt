@@ -41,23 +41,9 @@ class MainActivity : AppCompatActivity() {
             )
     }
 
-
-
-
-
     private fun instanciarClasseProdutos() {
 
         listaProduto = mutableListOf()
-//        val adapterProduto = AdapterProduto(this, listaProduto!!)
-//        recyclerView.adapter = adapterProduto
-
-//        val produtosGrouped = listaProduto!!.groupBy { it.sessao }
-//
-//        produtosGrouped.forEach { (sessao, produtos) ->
-//            produtos.forEach { produto ->
-//                listaProduto!!.add(produto)
-//            }
-//        }
 
         val produtoHd = ModelProduto(
 
@@ -128,37 +114,11 @@ class MainActivity : AppCompatActivity() {
         listaProduto!!.add(produtoTeclado)
         listaProduto!!.add(produtoGabinete)
 
-//        val listaProdutoSemRepetidos = listaProduto!!.distinctBy { it.sessao }
-//        val data = listaProdutoSemRepetidos.first().sessao
-
         val adapterProduto = AdapterProduto(this, listaProduto!!)
         recyclerView.adapter = adapterProduto
-
-        /**
-         * Note:
-         * ▬ Lista os Produtos da Data mais atual para a Data mais antiga.
-         ***/
-        //listaProduto!!.sortByDescending  { it.sessao }
-
-        /**
-         * Note:
-         * ▬ Lista os Produtos da Data mais antiga para a Data mais atual.
-         ***/
-       // listaProduto!!.sortBy  { it.sessao }
-
-//        val produtosGrouped = listaProduto!!.groupBy { it.sessao }
-//
-//        produtosGrouped.forEach { (sessao, produtos) ->
-//
-//        }
-//
-//        produtosGrouped.forEach { (sessao, produtos) ->
-//            // Exibe apenas uma data para o grupo
-//            val data = produtos.first().sessao
-//
-//            // Aqui você pode exibir os produtos
-//        }
-
-
     }
 }
+
+
+
+
