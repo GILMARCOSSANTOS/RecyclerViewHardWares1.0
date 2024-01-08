@@ -99,7 +99,7 @@ class MainActivity : AppCompatActivity() {
 
             data = "25/12/2023",
             foto = R.drawable.gabinete,
-            nome = "Gabinete Gamer",
+            nome = "Gabinete",
             descricao = "A série Carbide SPEC-DELTA RGB é uma " +
                     "caixa ATX de torre média de vidro temperado com " +
                     "estilo angular impressionante, fluxo de ar potente e três " +
@@ -113,6 +113,8 @@ class MainActivity : AppCompatActivity() {
         listaProduto!!.add(produtoPlacaDeVideo)
         listaProduto!!.add(produtoTeclado)
         listaProduto!!.add(produtoGabinete)
+
+        listaProduto = listaProduto!!.sortedBy { it.data }.toMutableList()
 
         val adapterProduto = AdapterProduto(this, listaProduto!!)
         recyclerView.adapter = adapterProduto
